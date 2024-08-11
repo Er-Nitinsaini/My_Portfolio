@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Portfolio -Nitin saini</title>
+    <link rel="website icon" href="IMG_20231119_123119 (1).png" style="border-radius: 50%;">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "JOJrgQjf19rX9DjwZ",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_qdz3inp', 'template_rxqnqum', this)
+                    .then(() => {
+                        showAlert('Message sent! Thank you😊');
+                    }, (error) => {
+                        showAlert('Failed to send!😒');
+                    });
+            });
+    
+            // Get the modal
+            var modal = document.getElementById("customAlert");
+    
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+    
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+    
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+    
+        function showAlert(message) {
+            var modal = document.getElementById("customAlert");
+            var alertMessage = document.getElementById("alertMessage");
+            alertMessage.textContent = message;
+            modal.style.display = "block";
+        }
+    </script>
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>NITIN SAINI</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#pro">Project</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#con-tech">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero animate-fade-in-up">
+        <div class="content">
+            <p class="greeting">HEY THERE !</p>
+            <h2 id="name">I AM NITIN SAINI</h2>
+            <p class="title">CS ENGINEER & DEVLOPER</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class='fab fa-facebook'></i></a>
+                <a href="https://www.instagram.com/nitinsaini_7/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Er-Nitinsaini"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="www.linkedin.com/in/nitin-saini-b08530186"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="Nitin_Saini_Resume.pdf" target="_blank"><button class="btn">DOWNLORD CV</button></a>
+        </div>
+        <div class="image">
+            <img src="5.png" alt="Jo Breed">
+        </div>
+    </section>
+
+    <section id="about-me" class="animate-slide-in-left">
+        <div class="i-mg">
+            <img src="public-approval-concept-with-male-character.png" style="height: 500px" alt="it's me">
+        </div>
+        <div>
+            <h1 id="intro">About</h1>
+            <p class="intpara">Hi, I'm Nitin Saini, a passionate web developer & computer science engineer with a strong
+                foundation in both front-end and back-end development. I specialize in creating dynamic, visually
+                appealing websites using technologies like HTML, CSS, JavaScript, React, and Node.js. With a focus on
+                clean, efficient code and user-centric design, I strive to deliver seamless and engaging user
+                experiences. </p>
+        </div>
+    </section>
+
+    <section id="skills" class="animate-slide-in-left">
+        <div id="sk-dis">
+            <h1 id="sk-ls">Skills & Project</h1>
+            <ul class="skill-discription">
+                <li>HTML, CSS, JAVASCRIPT,BOOTSTRAP</li>
+                <li>REACT, NODEJS</li>
+                <li>BASIC PYTHON, CORE JAVA, C</li>
+                <li>MySQL, MONGODB</li>
+            </ul>
+        </div>
+
+        <div>
+            <img class="i-mgs" src="profiling-concept-illustration.png" style="height: 400px" alt="it's me">
+        </div>
+    </section>
+
+    <section class="project animate-fade-in-up" id="pro">
+
+
+
+        <div class="wrapper">
+            <i id="left" class="fa-solid  fas fa-angle-left"></i>
+            <ul class="carousel">
+                <li class="card">
+                    <div class="img"><img src="image.png" alt="" draggable="false"> </div>
+                    <h2 style="color: rgb(0, 0, 0); font-weight:bold;">
+                        Zerocata
+                    </h2>
+                    <a href="https://er-nitinsaini.github.io/ZERO-X-Tic-tac-toe/" target="_blank"
+                        style="font-size: 1.5rem; text-decoration: none;color: rgb(5, 13, 106);">👉LINK👈</a>
+                </li>
+                <li class="card">
+                    <div class="img"><img
+                            src="https://www.amitree.com/wp-content/uploads/2021/08/the-pros-and-cons-of-paper-to-do-lists.jpeg"
+                            alt="" draggable="false"> </div>
+                    <h2 style="color: rgb(0, 0, 0); font-weight:bold;">To-Do-list</h2>
+                    <a href="https://er-nitinsaini.github.io/to-do-list/" target="_blank"
+                        style="font-size: 1.5rem; text-decoration: none;color: rgb(5, 13, 106);">👉LINK👈</a>
+
+                </li>
+                <li class="card">
+                    <div class="img"><img src="" alt="" draggable="false"> </div>
+                    <h2 style="color: rgb(0, 0, 0); font-weight:bold;">SOON</h2>
+                    <span>Coding Platform</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="#" alt="" draggable="false"> </div>
+                    <h2 style="color: rgb(0, 0, 0); font-weight:bold;">soon</h2>
+                    <span>Coding Platform</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="#" alt="" draggable="false"> </div>
+                    <h2 style="color: rgb(0, 0, 0); font-weight:bold;">SOON</h2>
+                    <span>Coding Platform</span>
+                </li>
+                <li class="card">
+                    <div class="img"><img src="#" alt="" draggable="false"> </div>
+                    <h2 style="color: rgb(0, 0, 0); font-weight:bold;">SOON</h2>
+                    <span>Coding Platform</span>
+                </li>
+            </ul>
+            <i id="right" class="fa-solid fas fa-angle-right"></i>
+        </div>
+
+    </section>
+
+    <section class="contect animate-slide-in-left" id="con-tech">
+        <div>
+            <img class="i-mg5" src="contact-concept-landing-page.png" style="height: 600px" alt="it's me">
+        </div>
+
+        <div class="contact-form-container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+    </section>
+
+    <section class="fotter">
+        <footer>
+            <div>
+                ©️ 2024 Copywrite: Nitin saini
+            </div>
+        </footer>
+    </section>
+    <script src="script.js"></script>
+    <div id="customAlert" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="alertMessage"></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
