@@ -44,6 +44,7 @@
 
 body {
     animation: fadeInUp 1.5s ease-out;
+    scroll-behavior: smooth;
 }
 
 #name {
