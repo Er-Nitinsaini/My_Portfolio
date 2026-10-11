@@ -73,7 +73,8 @@ html,body{background:var(--bg)}
 @media(prefers-reduced-motion:reduce){.hero-flicker{animation:none}}
 /* Composition polish after desktop/mobile visual QA: prevent overlap with intro. */
 @media(min-width:851px){
-  .hero-v2 .hero-intro{top:17%}
+  /* Keep the intro below the eyebrow at 120px, including on short/zoomed viewports. */
+  .hero-v2 .hero-intro{top:max(140px,17%)}
   .hero-v2 .hero-type{bottom:9%;z-index:7}
   .hero-v2 .hero-word{font-size:clamp(120px,14.3vw,255px)}
   .hero-v2 .hero-word--two{margin-left:25.5%}
